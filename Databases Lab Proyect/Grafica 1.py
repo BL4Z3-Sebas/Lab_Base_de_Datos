@@ -1,14 +1,13 @@
 from sqlalchemy import create_engine
 import pandas as pd
 import plotly.express as px
-import matplotlib.pyplot as plt
 
-# 🔹 Conexión con autenticación de Windows
+#conexión con autenticación de windows
 engine = create_engine(
     "mssql+pyodbc://localhost\\SQLEXPRESS/GreenTaxiTrip2021_2022?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
 )
 
-# 🔹 Consulta directa con UNION ALL y filtro por año
+#consulta directa con UNION ALL y filtro por año
 query = """
 SELECT 
     CAST(tr.lpep_pickup_datetime AS DATE) AS Fecha,
@@ -44,18 +43,29 @@ GROUP BY CAST(tr.lpep_pickup_datetime AS DATE)
 ORDER BY Fecha;
 """
 
-# 🔹 Ejecutar el query directamente
+#ejecutar el query directamente
 df = pd.read_sql(query, engine)
 
-# 🔹 Mostrar primeros datos
+#mostrar primeros datos
 print(df.head())
 
-# 🔹 Graficar
-plt.figure(figsize=(12,6))
-plt.plot(df['Fecha'], df['TotalViajes'], color='green', linewidth=2)
-plt.title('Total de viajes por día (2021–2022)', fontsize=14)
-plt.xlabel('Fecha')
-plt.ylabel('Número de viajes')
-plt.grid(True, linestyle='--', alpha=0.6)
-plt.tight_layout()
-plt.show()
+#graficar
+fig = px.line(
+    df,
+    x='Fecha',
+    y='TotalViajes',
+    title='Total de viajes por día (2021-2022)',
+    markers=True,
+    line_shape='spline',
+    labels={'Fecha': 'Fecha', 'TotalViajes': 'Número de viajes'}
+)
+
+fig.update_traces(line_color='green')
+fig.update_layout(
+    hovermode='x unified',
+    template='plotly_white',
+    font=dict(size=14),
+    title_x=0.5
+)
+
+fig.show()
