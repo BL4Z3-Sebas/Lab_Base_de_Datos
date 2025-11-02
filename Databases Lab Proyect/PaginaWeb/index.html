@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Se utiliza para las codificaciones de texto y que los caracteres se vean bien-->
+        <meta charset="UTF-8"> 
+        <!--Se utiliza para que la pagina web se adapte cuando se abra en un celular-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Taxis NYC 2021-2022 </title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="encabezado">
+            <div class="header">
+                <img src="logo-sinfondo.png" alt="logo de la pagina" id="logo">
+                <p class="supratitulo">Proyecto de Base de Datos</p>
+            </div>
+        </header>
+
+        <section class="centro">
+            <h1>Dashboard de Taxis Verdes en NYC 2021 - 2022</h1>
+        </section>
+        
+        <hr>
+        <section id="filtros">
+        </section>
+        <hr>
+        
+        <div class="contenido">
+            <section id="proposito">
+                <span class="corner top-right " aria-hidden="true"></span> 
+                <span class="corner top-left " aria-hidden="true"></span>
+                <span class="corner bottom-left" aria-hidden="true"></span>
+                <span class="corner bottom-right " aria-hidden="true"></span>
+                <p>"Aqui debemos decir el porque se creo el dashboard"  </p>
+            </section>
+            
+            <section id="graficas">
+                
+                <div class="grafica" id="grafica1">
+                    <div class="control-comparacion">
+                        <button class="boton-comparar">Comparar meses</button>
+
+                        <!-- Menú oculto que aparece al pulsar el botón -->
+                        <div class="menu-comparacion oculto">
+                        <label>Mes 1:
+                            <select class="mes1">
+                            <option value="">Selecciona</option>
+                            <option>Enero</option>
+                            <option>Febrero</option>
+                            <option>Marzo</option>
+                            <option>Abril</option>
+                            <option>Mayo</option>
+                            <option>Junio</option>
+                            <option>Julio</option>
+                            <option>Agosto</option>
+                            <option>Septiembre</option>
+                            <option>Octubre</option>
+                            <option>Noviembre</option>
+                            <option>Diciembre</option>
+                            </select>
+                        </label>
+
+                        <label>Mes 2:
+                            <select class="mes2">
+                            <option value="">Selecciona</option>
+                            <option>Enero</option>
+                            <option>Febrero</option>
+                            <option>Marzo</option>
+                            <option>Abril</option>
+                            <option>Mayo</option>
+                            <option>Junio</option>
+                            <option>Julio</option>
+                            <option>Agosto</option>
+                            <option>Septiembre</option>
+                            <option>Octubre</option>
+                            <option>Noviembre</option>
+                            <option>Diciembre</option>
+                            </select>
+                        </label>
+
+                        <div class="botones">
+                            <button class="boton-aplicar">Aplicar</button>
+                            <button class="boton-reset">Reset</button>
+                        </div>
+                        </div>
+                    </div>
+
+                <!-- Contenedor de la gráfica 1 -->
+                    <p>Gráfica 1: Viajes por Mes</p>
+                    <!-- Aquí irá el canvas o el svg de la gráfica (por ejemplo <canvas id="chart1"></canvas>) -->
+                    <canvas id="chart1"></canvas>
+                </div>
+
+                <div class="grafica" id="grafica2">
+                <!-- Contenedor de la gráfica 1 -->
+                    <p>Gráfica 2: Viajes por Mes</p>
+                    <!-- Aquí irá el canvas o el svg de la gráfica (por ejemplo <canvas id="chart1"></canvas>) -->
+                    <canvas id="chart2"></canvas>
+                </div>
+
+
+
+
+                <div class="grafica" id="grafica3">
+                    <p>Gráfica 3: Viajes por Mes</p>
+                    <canvas id="chart3"></canvas>
+                </div>
+
+                <div class="grafica" id="grafica4">
+                    <p>Gráfica 4: Viajes por Mes</p>
+                    <canvas id="chart4"></canvas>
+                </div>
+
+                <div class="grafica" id="grafica5">
+                    <p>Gráfica 5: Viajes por Mes</p>
+                    <canvas id="chart5"></canvas>
+                </div>
+
+
+            </section>
+        </div>
+
+        <script src="animaciones_comportanmiento.js"></script>
+    </body>
+</html>
