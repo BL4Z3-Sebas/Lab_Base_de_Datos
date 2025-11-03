@@ -87,7 +87,7 @@ def crear_grafica3():
     ), 1, 2)
 
     fig.update_layout(
-        title_text='Distribución de viajes según número de pasajeros — Años 2021 y 2022',
+        title_text='',
         annotations=[
             dict(text='2021', x=0.18, y=0.5, font_size=16, showarrow=False),
             dict(text='2022', x=0.82, y=0.5, font_size=16, showarrow=False)

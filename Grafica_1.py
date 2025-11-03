@@ -52,13 +52,13 @@ def crear_grafica1():
         df,
         x='Fecha',
         y='TotalViajes',
-        title='Total de viajes por día (2021-2022)',
+        title='',
         markers=True,
         line_shape='spline',
         labels={'Fecha': 'Fecha', 'TotalViajes': 'Número de viajes'}
     )
 
-    fig.update_traces(line_color='green')
+    fig.update_traces(line_color='#72BAA4')
     fig.update_layout(
         hovermode='x unified',
         template='plotly_white',

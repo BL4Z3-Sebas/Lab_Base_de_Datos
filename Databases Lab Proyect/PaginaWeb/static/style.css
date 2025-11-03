@@ -85,176 +85,39 @@ hr {
 
 #graficas {
     display: grid;
-    grid-template-columns: repeat( 1, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
 
-.grafica {
+.graficas {
     background-color: #2A2A2A;
     border-radius: 12px;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /*border: 1px solid red;*/
 }
 
-/* === 🎛️ CONTROLES DE COMPARACIÓN EN CADA GRÁFICA === */
-
-.control-comparacion {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 15px;
-    position: relative;
-    /*border: 1px solid lime;*/
-}
-
-/* === 🔘 BOTÓN PRINCIPAL "COMPARAR MESES" === */
-.boton-comparar {
-    background: linear-gradient(135deg, #00807A, #004B47);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
-    cursor: pointer;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    box-shadow: 0px 0px 8px rgba(0, 128, 122, 0.4);
-}
-
-.boton-comparar:hover {
-    background: linear-gradient(135deg, #00B4A3, #00665F);
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(0, 180, 163, 0.6);
-}
-
-/* === 🔽 MENÚ DESPLEGABLE (oculto/visible) === */
-.menu-comparacion {
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 10px;
-    display: none; /* por defecto oculto */
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
-    width: 100%;
-    animation: fadeIn 0.3s ease;
-
-    display: none;                 /* oculto por defecto (la clase .oculto también) */
-    position: absolute;            /* nos permite colocarlo al lado del botón */
-    top: 50%;                      /* centrado vertical respecto al contenedor */
-    left: 100%;                    /* por defecto aparece a la derecha del contenedor */
-    transform: translateY(-50%);   /* ajuste vertical (centra) */
-    display: flex;                 /* disposición horizontal de los controles */
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-    width: auto;                   /* solo ocupa lo necesario */
-    min-width: 260px;              /* evita que se vea demasiado pequeño */
-    z-index: 999;
-    white-space: nowrap;
-}
-
-.menu-comparacion label {
-    font-size: 14px;
-    color: #ccc;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.menu-comparacion select {
-    background: #333;
-    border: 1px solid #555;
-    border-radius: 6px;
-    color: #fff;
-    padding: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: border 0.2s ease;
-}
-
-.menu-comparacion select:focus {
-    border-color: #00B4A3;
-    outline: none;
-}
-
-.menu-comparacion.oculto {
-    display: none !important;
-}
-
-/* === 🔘 BOTONES INTERNOS (Aplicar / Reset) === */
-.botones {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.boton-aplicar {
-    background: #00665F;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 7px 12px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.boton-aplicar:hover {
-    background: #00B4A3;
-    transform: scale(1.05);
-}
-
-.boton-reset {
-    background: #8B0000;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 7px 12px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.boton-reset:hover {
-    background: #B22222;
-    transform: scale(1.05);
-}
-
-/* === ✨ PEQUEÑA ANIMACIÓN DE APARICIÓN === */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-/* === 📊 CANVAS DENTRO DE LA TARJETA === */
-canvas {
-    width: 100% !important;
-    height: 320px !important;
-    margin-top: 15px;
-    border-radius: 10px;
-    background-color: #1A1A1A;  
-}
 
 #grafica1 {
     border-top: 4px solid #00807A;
 }
 
 #grafica2 {
-    border-top: 4px solid #00807A;
+    border-top: 4px solid #A66835;
+}
+
+#grafica3 {
+    border-top: 4px solid #7B854E;
+}
+
+#grafica4 {
+    border-top: 4px solid #57698C;
+}
+
+#grafica5 {
+    border-top: 4px solid #662129;
 }
 
 #proposito {

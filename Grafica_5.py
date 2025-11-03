@@ -62,7 +62,7 @@ def crear_grafica5():
         df,
         x="Fecha",
         y="DistanciaPromedio",
-        title="Distancia promedio mensual de los viajes (2021-2022)",
+        title="",
         labels={
             "Fecha": "Fecha",
             "DistanciaPromedio": "Distancia promedio (millas)"

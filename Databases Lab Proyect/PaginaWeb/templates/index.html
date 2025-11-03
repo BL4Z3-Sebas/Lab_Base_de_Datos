@@ -32,107 +32,54 @@
                 <span class="corner top-left " aria-hidden="true"></span>
                 <span class="corner bottom-left" aria-hidden="true"></span>
                 <span class="corner bottom-right " aria-hidden="true"></span>
-                <p>"Aqui debemos decir el porque se creo el dashboard"  </p>
+                <p>
+                    En esta pagina vamos a encontrar una implementación a forma de análisis de datos del Dataset correspondiente a los registros del conjunto de datos agrupados de "viajes de Green Taxi" de 2021 y 2022 divididos en los datos por viaje de manera mensual y finalmente reunidos en una sola Base de Datos solida llamada "GreenTaxiTrip2021_2022.bak", un registro con 20 columnas de 1.909.157 filas, incluyendo en estos registros de viaje datos como campos que capturan fechas y horas de recogida y entrega, ubicaciones de zonas de taxis de recogida y entrega, distancias de viaje, tarifas detalladas, tipos de tarifas, tipos de pago y recuentos de pasajeros informados por el conductor.<br>
+                    A continuación presentamos 5 gráficos que contienen la información más significativa de la Base de Datos, encontrando entre estas la Gráfica 1, la cual detalla el la fecha completa y el total de viajes que hubo ese día, la Gráfica 2, que nos da un esquema de barras donde se compara el promedio mensual de tarifas y la comparativa de los años 2021 y 2022, para la Gráfica 3 se hicieron dos diagramas circulares, uno para cada año, donde se muestra el porcentaje de viajes por número de pasajeros, para la Gráfica 4 se hace un diagrama de flujo donde se retrata el promedio de viajes por mes durante los dos años y finalmente, para la Gráfica 5, un diagrama de área donde ahora evidenciamos las distancias promedio mensuales de ambos años.
+                </p>
             </section>
             
             <section id="graficas">
                 
-                <div class="grafica" id="grafica1">
-                    <div class="control-comparacion">
-                        <button class="boton-comparar">Comparar meses</button>
-
-                        <!-- Menú oculto que aparece al pulsar el botón -->
-                        <div class="menu-comparacion oculto">
-                        <label>Mes 1:
-                            <select class="mes1">
-                            <option value="">Selecciona</option>
-                            <option>Enero</option>
-                            <option>Febrero</option>
-                            <option>Marzo</option>
-                            <option>Abril</option>
-                            <option>Mayo</option>
-                            <option>Junio</option>
-                            <option>Julio</option>
-                            <option>Agosto</option>
-                            <option>Septiembre</option>
-                            <option>Octubre</option>
-                            <option>Noviembre</option>
-                            <option>Diciembre</option>
-                            </select>
-                        </label>
-
-                        <label>Mes 2:
-                            <select class="mes2">
-                            <option value="">Selecciona</option>
-                            <option>Enero</option>
-                            <option>Febrero</option>
-                            <option>Marzo</option>
-                            <option>Abril</option>
-                            <option>Mayo</option>
-                            <option>Junio</option>
-                            <option>Julio</option>
-                            <option>Agosto</option>
-                            <option>Septiembre</option>
-                            <option>Octubre</option>
-                            <option>Noviembre</option>
-                            <option>Diciembre</option>
-                            </select>
-                        </label>
-
-                        <div class="botones">
-                            <button class="boton-aplicar">Aplicar</button>
-                            <button class="boton-reset">Reset</button>
-                        </div>
-                        </div>
-                    </div>
-
-                <!-- Contenedor de la gráfica 1 -->
-                    <p>Gráfica 1: Viajes por Mes</p>
+                <div class="graficas" id="grafica1">
+                    <!-- Contenedor de la gráfica 1 -->
+                    <p>Total de viajes por día (2021-2022)</p>
                     <!-- Aquí irá el canvas o el svg de la gráfica (por ejemplo <canvas id="chart1"></canvas>) -->
                     <div id="grafica11">
-                    <script>{{ graphs.grafico1 | safe }}</script> 
+                    <div>{{ graphs.grafico1 | safe }}</div> 
                     </div>
                 </div>
 
-                <div class="grafica" id="grafica2">
+                <div class="graficas" id="grafica2">
                 <!-- Contenedor de la gráfica 1 -->
-                    <p>Gráfica 2: Viajes por Mes</p>
+                    <p>Promedio mensual de tarifas — Años 2021 y 2022</p>
                     <!-- Aquí irá el canvas o el svg de la gráfica (por ejemplo <canvas id="chart1"></canvas>) -->
                     <div id="grafica21">
-                        <script>
-                          {{ graphs.grafico2 | safe }}  
-                        </script>
+                        <div>{{ graphs.grafico2 | safe }}</div>
                     </div>
                 </div>
 
 
 
 
-                <div class="grafica" id="grafica3">
-                    <p>Gráfica 3: Viajes por Mes</p>
+                <div class="graficas" id="grafica3">
+                    <p>Distribución de viajes según número de pasajeros — Años 2021 y 2022</p>
                     <div id="grafica31">
-                        <script>
-                          {{ graphs.grafico3 | safe }}  
-                        </script>
+                        <div>{{ graphs.grafico3 | safe }}</div>
                     </div>
 
                 </div>
 
-                <div class="grafica" id="grafica4">
-                    <p>Gráfica 4: Viajes por Mes</p>
+                <div class="graficas" id="grafica4">
+                    <p>Duración promedio de viajes por mes (2021-2022)</p>
                     <div id="grafica41">
-                        <script>
-                          {{ graphs.grafico4 | safe }}  
-                        </script>
+                        <div>{{ graphs.grafico4 | safe }}</div>
                     </div>
                 </div>
 
-                <div class="grafica" id="grafica5">
-                    <p>Gráfica 5: Viajes por Mes</p>
+                <div class="graficas" id="grafica5">
+                    <p>Distancia promedio mensual de los viajes (2021-2022)</p>
                     <div id="grafica51">
-                        <script>
-                          {{ graphs.grafico5 | safe }}  
-                        </script>
+                        <div>{{ graphs.grafico5 | safe }}</div>
                     </div>
                 </div>
 
@@ -140,13 +87,14 @@
             </section>
 
             <section id="logoU">
+                <hr>
                 <a href="https://www.uninorte.edu.co/" target="_blank">
                 <img src="{{ url_for('static', filename='uninorte-sinfon.png') }}" alt="Ir a la página oficial de uninorte" id="logoU-img">
-            </a>
+                </a>
+            </hr>
         </section>
         </div>
 
-        <script src="{{ url_for('static', filename='animaciones_comportanmiento.js')}}"></script>
         <script  src="https://cdn.plot.ly/plotly-latest.min.js"> </script>   
 
     </body>

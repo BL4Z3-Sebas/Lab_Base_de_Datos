@@ -67,7 +67,7 @@ def crear_grafica2():
         x=df_2021['MesNombre'],
         y=df_2021['Promedio_Tarifa'],
         name='2021',
-        marker_color='navy',
+        marker_color='#AAAAAA',
         text=df_2021['Promedio_Tarifa'].round(2),
         textposition='inside',
         hovertemplate='Año: 2021<br>Mes: %{x}<br>Tarifa promedio: %{y:.2f} USD<extra></extra>'
@@ -78,7 +78,7 @@ def crear_grafica2():
         x=df_2022['MesNombre'],
         y=df_2022['Promedio_Tarifa'],
         name='2022',
-        marker_color='yellow',
+        marker_color='#5DADE2',
         text=df_2022['Promedio_Tarifa'].round(2),
         textposition='inside',
         hovertemplate='Año: 2022<br>Mes: %{x}<br>Tarifa promedio: %{y:.2f} USD<extra></extra>'
@@ -86,7 +86,7 @@ def crear_grafica2():
 
     # Configurar el diseño
     fig.update_layout(
-        title='Promedio mensual de tarifas — Años 2021 y 2022',
+        title='',
         xaxis_title='Mes',
         yaxis_title='Tarifa promedio (USD)',
         barmode='group',  # barras una al lado de la otra

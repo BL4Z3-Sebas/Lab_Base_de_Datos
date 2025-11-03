@@ -61,14 +61,14 @@ def crear_grafica4():
         df,
         x='Periodo',
         y='DuracionPromedio',
-        title='Duración promedio de viajes por mes (2021-2022)',
+        title='',
         markers=True,
         line_shape='spline',
         labels={'Periodo': 'Mes', 'DuracionPromedio': 'Duración promedio (minutos)'}
     )
 
     # estilo igual al de tus otras gráficas
-    fig.update_traces(line_color='green')
+    fig.update_traces(line_color='#2E6173')
     fig.update_layout(
         hovermode='x unified',
         template='plotly_white',
