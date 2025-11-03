@@ -6,13 +6,13 @@
         <!--Se utiliza para que la pagina web se adapte cuando se abra en un celular-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard Taxis NYC 2021-2022 </title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header id="encabezado">
             <div class="header">
-                    <img src="logo-sinfondo.png" alt="logo de la pagina" id="logo">
+                    <img src="{{ url_for('static', filename='logo-sinfondo.png') }}" alt="logo de la pagina" id="logo">
                 <p class="supratitulo">Proyecto de Base de Datos</p>
             </div>
         </header>
@@ -89,14 +89,20 @@
                 <!-- Contenedor de la gráfica 1 -->
                     <p>Gráfica 1: Viajes por Mes</p>
                     <!-- Aquí irá el canvas o el svg de la gráfica (por ejemplo <canvas id="chart1"></canvas>) -->
-                    <canvas id="chart1"></canvas>
+                    <div id="grafica11">
+                    <script>{{ graphs.grafico1 | safe }}</script> 
+                    </div>
                 </div>
 
                 <div class="grafica" id="grafica2">
                 <!-- Contenedor de la gráfica 1 -->
                     <p>Gráfica 2: Viajes por Mes</p>
                     <!-- Aquí irá el canvas o el svg de la gráfica (por ejemplo <canvas id="chart1"></canvas>) -->
-                    <canvas id="chart2"></canvas>
+                    <div id="grafica21">
+                        <script>
+                          {{ graphs.grafico2 | safe }}  
+                        </script>
+                    </div>
                 </div>
 
 
@@ -104,17 +110,30 @@
 
                 <div class="grafica" id="grafica3">
                     <p>Gráfica 3: Viajes por Mes</p>
-                    <canvas id="chart3"></canvas>
+                    <div id="grafica31">
+                        <script>
+                          {{ graphs.grafico3 | safe }}  
+                        </script>
+                    </div>
+
                 </div>
 
                 <div class="grafica" id="grafica4">
                     <p>Gráfica 4: Viajes por Mes</p>
-                    <canvas id="chart4"></canvas>
+                    <div id="grafica41">
+                        <script>
+                          {{ graphs.grafico4 | safe }}  
+                        </script>
+                    </div>
                 </div>
 
                 <div class="grafica" id="grafica5">
                     <p>Gráfica 5: Viajes por Mes</p>
-                    <canvas id="chart5"></canvas>
+                    <div id="grafica51">
+                        <script>
+                          {{ graphs.grafico5 | safe }}  
+                        </script>
+                    </div>
                 </div>
 
 
@@ -122,11 +141,14 @@
 
             <section id="logoU">
                 <a href="https://www.uninorte.edu.co/" target="_blank">
-                <img src="uninorte-sinfon.png" alt="Ir a la página oficial de uninorte" id="logoU-img">
+                <img src="{{ url_for('static', filename='uninorte-sinfon.png') }}" alt="Ir a la página oficial de uninorte" id="logoU-img">
             </a>
         </section>
         </div>
 
-        <script src="animaciones_comportanmiento.js"></script>
+        <script src="{{ url_for('static', filename='animaciones_comportanmiento.js')}}"></script>
+        <script  src="https://cdn.plot.ly/plotly-latest.min.js"> </script>   
+
     </body>
+
 </html>

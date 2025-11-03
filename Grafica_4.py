@@ -82,8 +82,8 @@ def crear_grafica4():
         )
     )
 
-    fig.show()
+   
     return fig
 
 # ejecutar función
-crear_grafica4()
+

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (m !== excepto) m.classList.add("oculto");
     });
   }
-
+  
   botonesComparar.forEach(boton => {
     boton.addEventListener("click", (ev) => {
       ev.stopPropagation(); // evitar que el document click los cierre inmediatamente
@@ -116,4 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // mantén el resto de tu lógica de aplicar/reset (si ya la tienes)
   // si no, puedes reaplicar tu código existente para aplicar/reset aquí
+
+  
+  
 });
+

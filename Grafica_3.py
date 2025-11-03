@@ -97,7 +97,6 @@ def crear_grafica3():
         height=600
     )
 
-    fig.show()
+   
     return fig
 
-crear_grafica3()

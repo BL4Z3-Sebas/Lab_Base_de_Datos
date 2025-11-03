@@ -101,7 +101,6 @@ def crear_grafica2():
         plot_bgcolor='white'
     )
 
-    fig.show()
+  
     return fig
 
-crear_grafica2()
