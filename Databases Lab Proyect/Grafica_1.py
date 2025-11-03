@@ -66,7 +66,5 @@ def crear_grafica1():
         title_x=0.5
     )
 
-    fig.show()
     return fig
 
-crear_grafica1().show
