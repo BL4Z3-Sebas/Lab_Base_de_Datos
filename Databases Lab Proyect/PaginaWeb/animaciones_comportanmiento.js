@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const contenedor = boton.closest(".menu-comparacion");
-      const mes1 = contenedor.querySelector(".mes1").value;
+      const mes1 = contenedor.querySelector(".mes1").value; /*se guardan los valores al oprimir aplicar*/
       const mes2 = contenedor.querySelector(".mes2").value;
 
       if (mes1 && mes2) {
