@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-def crear_grafica2():
+def crear_grafica3():
     # Conexión con autenticación de Windows
     engine = create_engine(
         "mssql+pyodbc://localhost\\SQLEXPRESS/GreenTaxiTrip2021_2022?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
@@ -97,4 +97,7 @@ def crear_grafica2():
         height=600
     )
 
+    fig.show()
     return fig
+
+crear_grafica3()

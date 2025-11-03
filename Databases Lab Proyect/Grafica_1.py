@@ -65,6 +65,7 @@ def crear_grafica1():
         font=dict(size=14),
         title_x=0.5
     )
-
+    fig.show()
     return fig
 
+crear_grafica1()
